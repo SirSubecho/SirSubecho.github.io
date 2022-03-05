@@ -1,0 +1,102 @@
+@use "variables";
+@use "breakpoints" as bp;
+
+
+.home{
+    min-height: 100vh;
+    // margin-top: variables.$header-height;
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        p {
+            padding-top: 10px;
+        }
+
+        &__mobile {
+            @include bp.breakpoint-down(small){
+                padding-left: 5vw;
+            }
+        }
+
+        &__svg {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            animation: down .7s ease-in-out infinite alternate;
+
+            &__mobile {
+                @include bp.breakpoint-down(small){
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+
+        svg:hover{
+            fill: variables.$grayish;
+        }
+    }
+
+    &__greeting {
+        font-size: variables.$font-greeting;
+    }
+
+    &__location {
+        font-size: variables.$font-location;
+    }
+
+    &__name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 1.2;
+        font-size: variables.$font-name;
+        font-weight: bold;
+    }
+
+    &__title {
+        height: variables.$title-height;
+        overflow: hidden;
+
+        &__wrapper {
+            height: 100%;
+            animation: move 12s ease-in-out infinite alternate;
+        }
+
+        &__item {
+            height: variables.$title-height;
+            font-size: variables.$font-title;
+            font-weight: bold;
+            color: variables.$grayish;
+        }
+    }
+
+    @keyframes move {
+        25%{
+            transform: translateY(-7vh);
+        }
+        50%{
+            transform: translateY(-14vh);
+        }
+        75%{
+            transform: translateY(-21vh);
+        }
+        100%{
+            transform: translateY(-28vh);
+        }
+    }
+
+    @keyframes down {
+        100%{
+            transform: translate3d(-50%, 10%, 0);
+        }
+    }
+
+
+}

@@ -1,0 +1,91 @@
+@use "_variables" as variables;
+@use "breakpoints" as bp;
+
+html {
+    font-size: 100%; // 16px is 100%
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    // scroll-behavior: smooth;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit; // inherit from html
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0 0 variables.$header-height 0;
+}
+
+.container {
+    max-width: 780px;
+    padding: 0 1rem;
+    // max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container__mobile {
+    @include bp.breakpoint-down(small){
+        max-width: 95vw;
+    }
+
+}
+
+.current{
+    border-bottom: 2px solid variables.$grayish;
+}
+
+.hidden {
+    opacity: 0;
+    cursor: default;
+}
+
+.boxed {
+    border-bottom: 1px solid black;
+    background-color: black;
+}
+
+.hidden-on-mobile {
+    @include bp.breakpoint-down(small){
+        display: none;
+    }
+}
+
+.hidden-on-desktop {
+    @include bp.breakpoint-up(medium){
+        display: none;
+    }
+}
+.flex {
+    display: flex;
+
+    &-dc {
+        flex-direction: column;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-e {
+        justify-content: end;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}

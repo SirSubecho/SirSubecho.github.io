@@ -1,0 +1,32 @@
+@use "variables";
+@use "breakpoints" as bp;
+
+.footer {
+    position: relative;
+    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 2vh;
+    // padding-top: 50vw;
+    // bottom: -15vw;
+
+    &__mobile {
+        @include bp.breakpoint-down(small){
+            padding-top: 15vh;
+            // position: relative;
+        }
+    }
+
+    &__text {
+        font-weight: 200;
+        color: variables.$grayish;
+    }
+
+    &__mail {
+        font-weight: 200;
+        font-size: small;
+    }
+}

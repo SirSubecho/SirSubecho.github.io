@@ -1,0 +1,62 @@
+@use "breakpoints" as bp;
+
+.containers {  
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.7fr 1.5fr 1.2fr;
+    // grid-auto-columns: 1fr;
+    gap: .5em .5em;
+ 
+    justify-items: center;
+    // align-content: center;
+    align-items: center;
+ 
+ 
+    grid-auto-flow: row;
+    grid-template-areas:
+      "title title title"
+      "img info info"
+      "bio bio bio"
+      "work work work";
+
+    &__mobile {
+        @include bp.breakpoint-down(small){
+            display: grid; 
+            // width: 100%;
+            grid-template-columns: 1fr; 
+            grid-template-rows: 0.3fr 1fr 1fr 2.5fr 1.5fr; 
+            gap: .5em .5em; 
+            grid-template-areas: 
+                "title"
+                "img"
+                "info"
+                "bio"
+                "work"; 
+        }
+    }
+     
+  }
+  
+  .img { 
+      grid-area: img;
+    
+    }
+  
+  .title { 
+    grid-area: title;
+    font-size: 4vh;
+    font-weight: bold;
+    // text-align: center;
+    }
+  
+  .info { grid-area: info; }
+  
+  .bio {
+    grid-area: bio; 
+  }
+  
+  .work { grid-area: work; }
+
+
+  

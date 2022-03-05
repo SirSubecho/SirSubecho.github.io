@@ -1,0 +1,104 @@
+@use "_variables" as variables;
+@use "breakpoints" as bp;
+
+
+
+.contact {
+    min-height:50vh;
+    // background-color: beige;
+    padding-top: variables.$header-height;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: .2fr .2fr .3fr;
+    align-items: center;
+    justify-items: center;
+
+    // grid-auto-columns: 1fr;
+    gap: .5em .5em;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "contact__title contact__title contact__title"
+      "contact__mail contact__mail contact__mail"
+      "contact__linkedin contact__github contact__twitter";
+
+
+    &__mobile {
+        @include bp.breakpoint-down(small){
+            gap: 2em 1em;
+            grid-template-rows: .2fr .3fr .4fr;
+        }
+    }
+
+
+    &__title {
+
+        grid-area: contact__title;
+        font-size: 4vh;
+    }
+
+    &__mail {
+
+        grid-area: contact__mail;
+
+        
+
+        &__button {
+            width: 15vw;
+            display: inline-block;
+            border-radius: 10px;
+            height: 45px;
+            border: none;
+            padding: 0;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            border: 2.5px solid rgb(0, 0, 0);
+            
+            // transition: .2s ease;
+
+            &__mobile {
+                @include bp.breakpoint-down(small){
+                    width: 20vw;   
+                }
+            }
+            
+            &:hover {
+                background-color: variables.$grayish;
+                transition: .2s ease;
+                // border: none;
+
+                > a {
+                    // color: white
+                }
+            }
+
+            &__a {
+                color: rgb(0, 0, 0);
+                font-size: 2vh;
+            }
+        }
+
+    }
+
+    &__logo {
+
+        &:hover {
+            fill: variables.$grayish;
+        }
+    }
+
+    &__linkedin {
+        grid-area: contact__linkedin;
+    }
+
+    &__github {
+        grid-area: contact__github;
+    }
+
+    &__twitter {
+        grid-area: contact__twitter;
+    }
+
+}

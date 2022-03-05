@@ -1,0 +1,85 @@
+@use "_variables" as variables;
+
+
+.about {
+
+    // min-height: 781px;
+    padding-top: variables.$header-height;
+
+    &__heading {
+        // border-bottom: 4px solid black;
+        // need work around since its not working on ios (thickness)
+        // text-decoration: underline solid variables.$grayish;
+
+        text-decoration: underline solid variables.$grayish 5px;
+    }
+
+    &__work__span {
+        text-decoration: underline solid variables.$grayish 2px;
+        text-underline-offset: 1px;
+    }
+
+
+    &__container {
+
+        > img {
+            max-width: 100px;
+            border-radius: 50%;
+        }
+
+    }
+
+    &__wrapper {
+
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 0.2fr 1.4fr; 
+        align-items: baseline;
+        grid-template-rows: .8fr .8fr .8fr; 
+        gap: .5em .5em; 
+        grid-template-areas: 
+            "year text"
+            "year_two text_two"
+            "year_three text_three"; 
+
+
+        &__span {
+            font-weight: bold;
+    
+            &__text {
+                font-size: medium;
+                font-weight: 200;
+                // padding-left: -15em;
+            }
+
+            &__a {
+                color: rgb(0, 0, 0);
+                font-style: italic;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.year { grid-area: year; }
+.text { grid-area: text; }
+.year_two { grid-area: year_two; }
+.text_two { grid-area: text_two; }
+.year_three { grid-area: year_three; }
+.text_three { grid-area: text_three; }
+
+.about__circular-image-container { 
+    display: inline-block; 
+    position: relative; 
+    width: 150px; 
+    height: 150px; 
+    overflow: hidden; 
+    border-radius: 50%;
+    border: 4px solid black;
+} 
+.about__circular-image-container__img { 
+    width: auto;
+    height: 200%;
+    margin-left: -35px;
+    margin-top: -40px;
+}

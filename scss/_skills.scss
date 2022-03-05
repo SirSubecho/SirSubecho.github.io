@@ -1,0 +1,109 @@
+@use "_variables" as variables;
+@use "breakpoints" as bp;
+
+.skills {
+
+    min-height: 50vh;
+  
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr; 
+    grid-template-rows: 0.3fr 0.5fr 0.5fr; 
+    gap: 2em 2em; 
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 
+      "skills__title skills__title skills__title skills__title"
+      "skills__js skills__node skills__react skills__nosql"
+      "skills__html skills__css skills__git skills__restapi"; 
+
+    // background-color: aqua;
+    height:50vh;
+    // background-color: beige;
+    padding-top: variables.$header-height;
+
+    &__title {
+        grid-area: skills__title;
+        font-size: 4vh;
+    }
+
+    &__icon__container {
+      width: 50%;
+      height: 50%;
+    }
+
+    &__svg {
+      
+    }
+
+}
+
+.skills__js { grid-area: skills__js; }
+.skills__node { grid-area: skills__node; }
+.skills__react { grid-area: skills__react; }
+.skills__nosql { grid-area: skills__nosql; }
+.skills__html { grid-area: skills__html; }
+.skills__css { grid-area: skills__css; }
+.skills__git { grid-area: skills__git; }
+.skills__restapi { grid-area: skills__restapi; }
+
+
+
+.blinking-cursor {
+    color: variables.$grayish;
+    // color: black;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: variables.$grayish;
+        // color: black;
+
+    }
+  }
+  
+  @-moz-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+        color: variables.$grayish;
+        // color: black;
+
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: variables.$grayish;
+    }
+  }
+  
+  @-ms-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: variables.$grayish;
+    }
+  }
+  
+  @-o-keyframes blink {
+    from, to {
+      color: transparent;
+    }
+    50% {
+      color: variables.$grayish;
+    }
+  }
