@@ -233,19 +233,62 @@ body {
 
 .about {
   padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.7fr 1.5fr 1.2fr;
+  gap: 0.5em 0.5em;
+  justify-items: center;
+  align-items: center;
+  grid-auto-flow: row;
+  grid-template-areas: "about__title about__title about__title" "about__img about__info about__info" "about__bio about__bio about__bio" "about__work about__work about__work";
+}
+@media (max-width: 39.9375em) {
+  .about__mobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr 2.5fr 1.5fr;
+    gap: 0.5em 0.5em;
+    grid-template-areas: "about__title" "about__img" "about__info" "about__bio" "about__work";
+  }
 }
 .about__heading {
   -webkit-text-decoration: underline solid #3dd1b1 5px;
           text-decoration: underline solid #3dd1b1 5px;
 }
+.about__title {
+  grid-area: about__title;
+  font-size: 4vh;
+  font-weight: bold;
+}
+.about__img {
+  grid-area: about__img;
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+.about__img__img {
+  width: auto;
+  height: 200%;
+  margin-left: -35px;
+  margin-top: -40px;
+}
+.about__info {
+  grid-area: about__info;
+}
+.about__bio {
+  grid-area: about__bio;
+}
+.about__work {
+  grid-area: about__work;
+}
 .about__work__span {
   -webkit-text-decoration: underline solid #3dd1b1 2px;
           text-decoration: underline solid #3dd1b1 2px;
   text-underline-offset: 1px;
-}
-.about__container > img {
-  max-width: 100px;
-  border-radius: 50%;
 }
 .about__wrapper {
   display: grid;
@@ -293,65 +336,6 @@ body {
   grid-area: text_three;
 }
 
-.about__circular-image-container {
-  display: inline-block;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 4px solid black;
-}
-
-.about__circular-image-container__img {
-  width: auto;
-  height: 200%;
-  margin-left: -35px;
-  margin-top: -40px;
-}
-
-.containers {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0.7fr 1.5fr 1.2fr;
-  gap: 0.5em 0.5em;
-  justify-items: center;
-  align-items: center;
-  grid-auto-flow: row;
-  grid-template-areas: "title title title" "img info info" "bio bio bio" "work work work";
-}
-@media (max-width: 39.9375em) {
-  .containers__mobile {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr 1fr 2.5fr 1.5fr;
-    gap: 0.5em 0.5em;
-    grid-template-areas: "title" "img" "info" "bio" "work";
-  }
-}
-
-.img {
-  grid-area: img;
-}
-
-.title {
-  grid-area: title;
-  font-size: 4vh;
-  font-weight: bold;
-}
-
-.info {
-  grid-area: info;
-}
-
-.bio {
-  grid-area: bio;
-}
-
-.work {
-  grid-area: work;
-}
-
 .skills {
   min-height: 50vh;
   display: grid;
@@ -368,6 +352,7 @@ body {
 .skills__title {
   grid-area: skills__title;
   font-size: 4vh;
+  font-weight: bold;
 }
 .skills__icon__container {
   width: 50%;
@@ -448,6 +433,7 @@ body {
 .contact__title {
   grid-area: contact__title;
   font-size: 4vh;
+  font-weight: bold;
 }
 .contact__mail {
   grid-area: contact__mail;

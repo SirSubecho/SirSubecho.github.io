@@ -6,7 +6,9 @@ var navConainterEl = document.getElementById('navContainer');
 const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
 
-btnHamburger.addEventListener('click', function(){
+btnHamburger.addEventListener('click', function(e){
+    // otherwise the page will go up on click 
+    e.preventDefault();
     // console.log('click hamburger');
   
     if(header.classList.contains('open')){ // Close Hamburger Menu
