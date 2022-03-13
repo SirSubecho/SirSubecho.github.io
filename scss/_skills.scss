@@ -17,9 +17,7 @@
       "skills__js skills__node skills__react skills__nosql"
       "skills__html skills__css skills__git skills__restapi"; 
 
-    // background-color: aqua;
-    height:50vh;
-    // background-color: beige;
+    height: 50vh;
     padding-top: variables.$header-height;
 
     &__title {
@@ -33,26 +31,48 @@
       height: 50%;
     }
 
-    &__svg {
+    // &__svg {
       
+    // }
+
+    &__js {
+      grid-area: skills__js;
     }
 
+    &__node {
+      grid-area: skills__node;
+    }
+
+    &__react {
+      grid-area: skills__react;
+    }
+
+    &__nosql {
+      grid-area: skills__nosql;
+    }
+
+    &__html {
+      grid-area: skills__html;
+    }
+
+    &__css {
+      grid-area: skills__css;
+    }
+
+    &__git {
+      grid-area: skills__git;
+    }
+
+    &__restapi {
+      grid-area: skills__restapi;
+    }
 }
 
-.skills__js { grid-area: skills__js; }
-.skills__node { grid-area: skills__node; }
-.skills__react { grid-area: skills__react; }
-.skills__nosql { grid-area: skills__nosql; }
-.skills__html { grid-area: skills__html; }
-.skills__css { grid-area: skills__css; }
-.skills__git { grid-area: skills__git; }
-.skills__restapi { grid-area: skills__restapi; }
-
+// CHECK IF NECESSARY
 
 
 .blinking-cursor {
     color: variables.$grayish;
-    // color: black;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;
     -ms-animation: 1s blink step-end infinite;

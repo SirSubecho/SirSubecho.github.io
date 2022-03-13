@@ -41,6 +41,10 @@ body {
 
 }
 
+.has-fade {
+    visibility: hidden;
+}
+
 .current{
     border-bottom: 2px solid variables.$grayish;
 }

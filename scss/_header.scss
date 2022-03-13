@@ -28,6 +28,20 @@
         }
       }
 
+    &__menu {
+      position: absolute;
+      width: 100%;
+      height: variables.$header-height;
+      background: black;
+      margin-top: 0.85rem;
+      padding: 1.4rem;
+
+      a {
+        padding: 0.625rem;
+        color: white;
+      }
+    }
+
     &__toggle {
 
         > span {

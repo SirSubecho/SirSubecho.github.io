@@ -35,6 +35,10 @@ body {
   }
 }
 
+.has-fade {
+  visibility: hidden;
+}
+
 .current {
   border-bottom: 2px solid #3dd1b1;
 }
@@ -99,6 +103,18 @@ body {
 .header.open .header__toggle > span:last-child {
   transform: rotate(-45deg);
 }
+.header__menu {
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  background: black;
+  margin-top: 0.85rem;
+  padding: 1.4rem;
+}
+.header__menu a {
+  padding: 0.625rem;
+  color: white;
+}
 .header__toggle > span {
   display: block;
   width: 26px;
@@ -126,6 +142,78 @@ body {
 }
 .header__links a:hover {
   color: #3dd1b1;
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  -webkit-animation: fade-in 0.2s ease-in-out forwards;
+          animation: fade-in 0.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  -webkit-animation: fade-out 0.2s ease-in-out forwards;
+          animation: fade-out 0.2s ease-in-out forwards;
 }
 
 .home {
@@ -361,31 +449,24 @@ body {
 .skills__js {
   grid-area: skills__js;
 }
-
 .skills__node {
   grid-area: skills__node;
 }
-
 .skills__react {
   grid-area: skills__react;
 }
-
 .skills__nosql {
   grid-area: skills__nosql;
 }
-
 .skills__html {
   grid-area: skills__html;
 }
-
 .skills__css {
   grid-area: skills__css;
 }
-
 .skills__git {
   grid-area: skills__git;
 }
-
 .skills__restapi {
   grid-area: skills__restapi;
 }
@@ -413,7 +494,6 @@ body {
   }
 }
 .contact {
-  min-height: 50vh;
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -481,6 +561,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
 }
@@ -490,8 +571,22 @@ body {
   }
 }
 .footer__text {
-  font-weight: 200;
   color: #3dd1b1;
+  font-weight: 200;
+}
+@media (max-width: 39.9375em) {
+  .footer__text__mobile {
+    font-size: 5vw;
+  }
+}
+.footer__copyright {
+  color: #3dd1b1;
+  font-weight: 200;
+}
+@media (max-width: 39.9375em) {
+  .footer__copyright__mobile {
+    font-size: 4vw;
+  }
 }
 .footer__mail {
   font-weight: 200;
