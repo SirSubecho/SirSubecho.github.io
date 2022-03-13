@@ -9,6 +9,8 @@
     align-items: center;
     justify-content: center;
 
+    padding-top: 8vh;
+
     &__mobile {
         @include bp.breakpoint-down(small){
             padding-top: 15vh;

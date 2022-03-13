@@ -564,6 +564,7 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  padding-top: 8vh;
 }
 @media (max-width: 39.9375em) {
   .footer__mobile {
