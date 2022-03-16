@@ -4,7 +4,7 @@
 
 
 .contact {
-    // min-height: 100vh;
+    min-height: 50vh;
     padding-top: variables.$header-height;
 
     display: grid;
@@ -13,7 +13,7 @@
     align-items: center;
     justify-items: center;
 
-    gap: .5em .5em;
+    gap: 3em .5em;
     grid-auto-flow: row;
     grid-template-areas:
       "contact__title contact__title contact__title"
@@ -77,6 +77,9 @@
     }
 
     &__logo {
+
+        width: 7vh;
+        height: 7vh;
 
         &:hover {
             fill: variables.$grayish;

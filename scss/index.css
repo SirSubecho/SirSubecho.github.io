@@ -494,13 +494,14 @@ body {
   }
 }
 .contact {
+  min-height: 50vh;
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 0.2fr 0.3fr;
   align-items: center;
   justify-items: center;
-  gap: 0.5em 0.5em;
+  gap: 3em 0.5em;
   grid-auto-flow: row;
   grid-template-areas: "contact__title contact__title contact__title" "contact__mail contact__mail contact__mail" "contact__linkedin contact__github contact__twitter";
 }
@@ -543,6 +544,10 @@ body {
 .contact__mail__button__a {
   color: black;
   font-size: 2vh;
+}
+.contact__logo {
+  width: 7vh;
+  height: 7vh;
 }
 .contact__logo:hover {
   fill: #3dd1b1;
