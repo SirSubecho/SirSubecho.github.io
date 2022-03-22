@@ -1,0 +1,131 @@
+@use "_variables" as variables;
+@use "breakpoints" as bp;
+
+
+
+.form {
+
+    &__form {
+        // display: flex;
+        // flex-direction: column;
+
+        position: relative;
+        width: 50%;
+
+        &__mobile {
+            @include bp.breakpoint-down(small){
+                width: 100%;
+            }
+        }
+
+        &__wrapper {
+            padding-left: 1vh;
+        }
+    }
+
+    &__name {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding-top: 70px;
+
+        &__mobile {
+            @include bp.breakpoint-down(small){
+                padding-top: 50px;
+            }
+        }
+
+        &__label {
+            position: absolute;
+            bottom: 0px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            border-bottom: 1px solid black;
+            pointer-events: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: -1px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid variables.$grayish;
+                transform: translateX(-100%);
+                transition: transform .5s ease;
+            }
+
+            &__content {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                transition: all 0.3s ease;
+            }
+        }
+    
+        &__input {
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            font-family: inherit;
+            outline: none;
+    
+            &:focus + .form__name__label .form__name__label__content,
+            &:valid + .form__name__label .form__name__label__content {
+                transform: translateY(-130%);
+                color: variables.$grayish;
+            }
+
+            &:focus + .form__name__label::after,
+            &:valid + .form__name__label::after {
+                transform: translateX(0%);
+            }
+        }
+
+        
+    }    
+
+    &__button {
+        font-family: inherit;
+        font-size: inherit;
+        width: 100px;
+        height: auto;
+        background-color: white;
+        margin-top: 50px;
+        border: 2.5px solid rgb(0, 0, 0); 
+        border-radius: 5px;
+        background-color: variables.$grayish;
+        color: rgb(0, 0, 0);
+
+        &__mobile {
+            @include bp.breakpoint-down(small){
+                // width: 100%;
+                
+                position: relative;
+                right: -70%;
+                
+                height: 4.5vh;
+
+                // position: absolute;
+                // right: 5px;
+                // bottom: -50px;
+            }
+        }
+    }
+
+}
+
+
+.form__name__input:not(:placeholder-shown).form__name__input:not(:valid) + .form__name__label .form__name__label__content
+{
+    transform: translateY(-130%);
+    color: variables.$red;
+}
+
+.form__name__input:not(:placeholder-shown).form__name__input:not(:valid) + .form__name__label::after {
+    border-bottom: 3px solid variables.$red;
+    transform: translateX(0%);
+}

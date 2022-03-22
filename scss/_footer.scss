@@ -18,7 +18,7 @@
     }
 
     &__text {
-        color: variables.$grayish;
+        // color: variables.$grayish;
         font-weight: 200;
 
         &__mobile {
@@ -30,6 +30,7 @@
 
     &__copyright {
         color: variables.$grayish;
+
         font-weight: 200;
         &__mobile {
             @include bp.breakpoint-down(small){
@@ -41,5 +42,9 @@
     &__mail {
         font-weight: 200;
         font-size: small;
+
+        &__span {
+            font-weight: bold;
+        }
     }
 }

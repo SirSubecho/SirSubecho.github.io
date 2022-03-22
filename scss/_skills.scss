@@ -4,6 +4,8 @@
 .skills {
 
     min-height: 50vh;
+    // min-height: 100vh;
+    // height: 50vh;
   
     display: grid; 
     grid-auto-columns: 1fr; 
@@ -17,8 +19,30 @@
       "skills__js skills__node skills__react skills__nosql"
       "skills__html skills__css skills__git skills__restapi"; 
 
-    height: 50vh;
     padding-top: variables.$header-height;
+
+
+    &__svg {
+      
+      &__js {
+        transition: all .5s ease;
+        
+        &:hover {
+          fill: #f0db4f;
+        }
+      }
+      
+      &__react {
+        transition: all .5s ease;
+        
+
+        &:hover {
+          fill: #61DBFB;
+        }
+
+      }
+
+    }
 
     &__title {
         grid-area: skills__title;
@@ -30,10 +54,6 @@
       width: 50%;
       height: 50%;
     }
-
-    // &__svg {
-      
-    // }
 
     &__js {
       grid-area: skills__js;

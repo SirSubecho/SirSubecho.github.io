@@ -46,6 +46,7 @@
         </header>
         <main>
             <section class="home container container__mobile flex" id="home">
+                <h2 class="hide-on-screen">home</h2>
                 <div class="home__intro home__intro__mobile">
                     <div class="home__greeting">Hi, I am</div>
                     <div class="home__name">Stephan Hartmann</div>
@@ -60,7 +61,6 @@
                         </div>
                     </div> 
                     <div class="home__location">based in Berlin, Germany.</div>
-                    <!-- <p class="home__description">Enrolled university student in Berlin Germany. Working with web technologies.</p> -->
                     <a class="home__arrow" href="#about">
                         <svg class="home__intro__svg home__intro__svg__mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
                     </a>
@@ -69,6 +69,7 @@
             </section>
 
             <section>
+                <h2 class="hide-on-screen">about</h2>
                 <div class="container about about__mobile" id="about">
                     <div class="about__img">
                         <img class="about__img__img" src="./assets/about.jpg" alt="">
@@ -97,8 +98,7 @@
             </section>
 
             <section class="skills container" id="skills">
-                <!-- <h2 class="skills__h1">knowledge</h2>  DISPALY NONE HERE -->
-                <!-- <div class="skills__title">knowledge<a class="blinking-cursor">_</a></div> -->
+                <h2 class="hide-on-screen">knowledge</h2>
                 <div class="skills__title">
                     knowledge<span class="blinking-cursor">_</span>
                 </div>
@@ -129,15 +129,21 @@
             </section>            
             
             <section class="contact contact__mobile container" id="contact">
+                <h2 class="hide-on-screen">contact</h2>
                 <div class="contact__title">
                     contact me
                     <!-- <span class="blinking-cursor">.</span> -->
                 </div>
                 <div class="contact__mail">
-                    <button class="contact__mail__button contact__mail__button__mobile"><a class="contact__mail__button__a" href="mailto:job@domain.net">mail me.</a></button>
-                    <!-- <div class="contact__mail__text">or find me on</div> -->
-                    <!-- <a class="contact__mail__button__a" href="mailto:job@subecho.net">mail me.</a> -->
-                    
+                    <!-- <a class="contact__mail__button__a" href="mailto:job@domain.net">
+                        <button class="contact__mail__button contact__mail__button__mobile">mail me.</button>
+                    </a> -->
+                    <div class="contact__mail__container contact__mail__container__mobile">
+                        <a class="contact__mail__container__button" href="mailto:job@domain.net">
+                            mail me.
+                        </a>
+                    </div>
+                    <!-- <button class="contact__mail__button contact__mail__button__mobile"><a class="contact__mail__button__a" href="mailto:job@domain.net">mail me.</a></button> -->
                 </div>
                 <div class="contact__linkedin flex flex-ai-c flex-dc flex-jc-sb">
                     <a href="https://www.linkedin.com/" target="_blank">
@@ -157,14 +163,39 @@
                     </a>
                     Twitter
                 </div>
+
             </section>
 
+            <div class="form container">
+                    <form class="form__form form__form__mobile flex flex-dc" action="" method="post">
+                        <h3 class="about__heading form__h3">contact form</h3>
+                        <h4 class="form__h4">feel free to leave a message</h4>
+                            <div class="form__form__wrapper">
+                                <div class="form__name form__name__mobile">
+                                    <input class="form__name__input" type="text" id="name" name="name" autocomplete="off" placeholder=" " required>
+                                    <label class="form__name__label" for="name">
+                                        <span class="form__name__label__content" >name</span>
+                                    </label>
+                                </div>
+                                <div class="form__name form__name__mobile">
+                                    <input class="form__name__input" type="email" id="name" name="name" autocomplete="off" placeholder=" " required>
+                                    <label class="form__name__label" for="name">
+                                        <span class="form__name__label__content" >mail</span>
+                                    </label>
+                                </div>
+                                <div class="form__name form__name__mobile">
+                                    <input class="form__name__input" type="text" id="name" name="name" autocomplete="off" placeholder=" " required>
+                                    <label class="form__name__label" for="name">
+                                        <span class="form__name__label__content" >topic</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="form__button form__button__mobile" type="submit">send</button>
+                    </form>
+                </div>
+            </div>
+
             <footer class="container container__mobile footer footer__mobile">
-                <!-- <div class="footer__text">
-                    © 2022 Stephan Hartmann.
-                    <br>
-                    All Rights Reserved.
-                </div> -->
                 <div class="footer__text footer__text__mobile">© 2022 Stephan Hartmann.</div>
                 <div class="footer__copyright footer__copyright__mobile">All Rights Reserved.</div>
                 <div class="footer__mail">

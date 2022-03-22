@@ -44,8 +44,11 @@ body {
 }
 
 .hidden {
-  opacity: 0;
-  cursor: default;
+  visibility: hidden;
+}
+
+.hide-on-screen {
+  display: none;
 }
 
 .boxed {
@@ -82,6 +85,9 @@ body {
 }
 .flex-ai-c {
   align-items: center;
+}
+.flex-ai-fs {
+  align-items: flex-start;
 }
 
 .header {
@@ -434,8 +440,19 @@ body {
   align-items: center;
   justify-items: center;
   grid-template-areas: "skills__title skills__title skills__title skills__title" "skills__js skills__node skills__react skills__nosql" "skills__html skills__css skills__git skills__restapi";
-  height: 50vh;
   padding-top: 5rem;
+}
+.skills__svg__js {
+  transition: all 0.5s ease;
+}
+.skills__svg__js:hover {
+  fill: #f0db4f;
+}
+.skills__svg__react {
+  transition: all 0.5s ease;
+}
+.skills__svg__react:hover {
+  fill: #61DBFB;
 }
 .skills__title {
   grid-area: skills__title;
@@ -494,7 +511,7 @@ body {
   }
 }
 .contact {
-  min-height: 50vh;
+  min-height: 60vh;
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -519,31 +536,25 @@ body {
 .contact__mail {
   grid-area: contact__mail;
 }
-.contact__mail__button {
-  width: 15vw;
-  display: inline-block;
+.contact__mail__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15vh;
+  height: 4vh;
   border-radius: 10px;
-  height: 45px;
-  border: none;
-  padding: 0;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: transparent;
-  color: black;
+  text-align: center;
   border: 2.5px solid black;
+  background-color: #3dd1b1;
 }
 @media (max-width: 39.9375em) {
-  .contact__mail__button__mobile {
-    width: 20vw;
+  .contact__mail__container__mobile {
+    width: 20vh;
+    height: 6vh;
   }
 }
-.contact__mail__button:hover {
-  background-color: #3dd1b1;
-  transition: 0.2s ease;
-}
-.contact__mail__button__a {
+.contact__mail__container__button {
   color: black;
-  font-size: 2vh;
 }
 .contact__logo {
   width: 7vh;
@@ -561,6 +572,124 @@ body {
 .contact__twitter {
   grid-area: contact__twitter;
 }
+.contact__container__form {
+  grid-area: contact__container__form;
+}
+
+.form__form {
+  position: relative;
+  width: 50%;
+}
+@media (max-width: 39.9375em) {
+  .form__form__mobile {
+    width: 100%;
+  }
+}
+.form__form__wrapper {
+  padding-left: 1vh;
+}
+.form__name {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 70px;
+}
+@media (max-width: 39.9375em) {
+  .form__name__mobile {
+    padding-top: 50px;
+  }
+}
+.form__name__label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  pointer-events: none;
+}
+.form__name__label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #3dd1b1;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.form__name__label__content {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form__name__input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+.form__name__input:focus + .form__name__label .form__name__label__content, .form__name__input:valid + .form__name__label .form__name__label__content {
+  transform: translateY(-130%);
+  color: #3dd1b1;
+}
+.form__name__input:focus + .form__name__label::after, .form__name__input:valid + .form__name__label::after {
+  transform: translateX(0%);
+}
+.form__button {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100px;
+  height: auto;
+  background-color: white;
+  margin-top: 50px;
+  border: 2.5px solid black;
+  border-radius: 5px;
+  background-color: #3dd1b1;
+  color: black;
+}
+@media (max-width: 39.9375em) {
+  .form__button__mobile {
+    position: relative;
+    right: -70%;
+    height: 4.5vh;
+  }
+}
+
+.form__name__input:not(:-moz-placeholder-shown).form__name__input:not(:valid) + .form__name__label .form__name__label__content {
+  transform: translateY(-130%);
+  color: red;
+}
+
+.form__name__input:not(:-ms-input-placeholder).form__name__input:not(:valid) + .form__name__label .form__name__label__content {
+  transform: translateY(-130%);
+  color: red;
+}
+
+.form__name__input:not(:placeholder-shown).form__name__input:not(:valid) + .form__name__label .form__name__label__content {
+  transform: translateY(-130%);
+  color: red;
+}
+
+.form__name__input:not(:-moz-placeholder-shown).form__name__input:not(:valid) + .form__name__label::after {
+  border-bottom: 3px solid red;
+  transform: translateX(0%);
+}
+
+.form__name__input:not(:-ms-input-placeholder).form__name__input:not(:valid) + .form__name__label::after {
+  border-bottom: 3px solid red;
+  transform: translateX(0%);
+}
+
+.form__name__input:not(:placeholder-shown).form__name__input:not(:valid) + .form__name__label::after {
+  border-bottom: 3px solid red;
+  transform: translateX(0%);
+}
 
 .footer {
   position: relative;
@@ -577,7 +706,6 @@ body {
   }
 }
 .footer__text {
-  color: #3dd1b1;
   font-weight: 200;
 }
 @media (max-width: 39.9375em) {
@@ -597,4 +725,7 @@ body {
 .footer__mail {
   font-weight: 200;
   font-size: small;
+}
+.footer__mail__span {
+  font-weight: bold;
 }/*# sourceMappingURL=index.css.map */
