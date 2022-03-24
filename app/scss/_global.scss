@@ -44,7 +44,7 @@ body {
 }
 
 .current{
-    border-bottom: 2px solid variables.$grayish;
+    border-bottom: 2px solid variables.$greenish;
 }
 
 .hidden {
@@ -58,8 +58,8 @@ body {
 
 
 .boxed {
-    border-bottom: 1px solid black;
-    background-color: black;
+    border-bottom: 1px solid variables.$black;
+    background-color: variables.$black;
 }
 
 .hidden-on-mobile {

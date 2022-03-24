@@ -39,7 +39,7 @@
 
 
     &__heading {
-        text-decoration: underline solid variables.$grayish 5px;
+        text-decoration: underline solid variables.$greenish 5px;
     }
 
     &__title {
@@ -56,7 +56,7 @@
         height: 150px; 
         overflow: hidden; 
         border-radius: 50%;
-        border: 4px solid black;
+        border: 4px solid variables.$black;
 
         &__img {
             width: auto;
@@ -79,7 +79,7 @@
         grid-area: about__work;
 
         &__span {
-            text-decoration: underline solid variables.$grayish 2px;
+            text-decoration: underline solid variables.$greenish 2px;
             text-underline-offset: 1px;
         }
     }

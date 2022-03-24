@@ -38,7 +38,7 @@
         }
 
         svg:hover{
-            fill: variables.$grayish;
+            fill: variables.$greenish;
         }
     }
 
@@ -71,7 +71,7 @@
             height: variables.$title-height;
             font-size: variables.$font-title;
             font-weight: bold;
-            color: variables.$grayish;
+            color: variables.$greenish;
         }
     }
 }
