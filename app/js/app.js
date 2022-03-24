@@ -7,9 +7,8 @@ const btnHamburger = document.querySelector('#btnHamburger');
 const header = document.querySelector('.header');
 const fadeElems = document.querySelectorAll('.has-fade');
 
-btnHamburger.addEventListener('click', function(e){
-    // otherwise the page will go up on click 
-    e.preventDefault();
+btnHamburger.addEventListener('click', function(event){
+    event.preventDefault();
   
     if(header.classList.contains('open')){ // Close Hamburger Menu
       header.classList.remove('open');
@@ -27,29 +26,44 @@ btnHamburger.addEventListener('click', function(e){
     }  
   });
 
-$(document).ready(function() {
-    $(window).scroll(function() {
-        if($(this).scrollTop() < 600) { 
-            logoEl.classList.add('hidden')
-        } else {
-            logoEl.classList.remove('hidden')
-        }
-  });
+function logSubmit() {
+  log.textContent = `message send.`;
+}
+
+function cleanInputs() {
+  nameInput.value = '';
+  mailInput.value = '';
+  topicInput.value = '';
+}
+
+const form = document.getElementById('form');
+const log = document.getElementById('log');
+
+form.addEventListener('submit', function handleClick(event) {
+  event.preventDefault();
+  logSubmit();
+  cleanInputs();
 });
 
-
+const nameInput = document.getElementById('name');
+const mailInput = document.getElementById('mail');
+const topicInput = document.getElementById('topic');
 
 
 const mainNavLinks = document.querySelectorAll("#navContainer div a");
 const mainSections = document.querySelectorAll("main section");
 
-console.log(mainSections)
 
 let lastId;
-// let cur = [];
 
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
+
+  if(fromTop < 800) { 
+    logoEl.classList.add('hidden')
+  } else {
+    logoEl.classList.remove('hidden')
+  }
 
   mainNavLinks.forEach(link => {
     let section = document.querySelector(link.hash);

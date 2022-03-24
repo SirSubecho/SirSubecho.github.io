@@ -4,7 +4,7 @@
 
 
 .contact {
-    min-height: 60vh;
+    min-height: 45vh;
     padding-top: variables.$header-height;
 
     display: grid;
@@ -25,6 +25,7 @@
         @include bp.breakpoint-down(small){
             gap: 2em 1em;
             grid-template-rows: .2fr .3fr .4fr;
+            min-height: 65vh;
         }
     }
 
@@ -91,11 +92,5 @@
     &__container__form {
 
         grid-area: contact__container__form;
-        // width: 100%;
-        // height: 100%;
-
-        
-
-
     }
 }

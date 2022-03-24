@@ -7,11 +7,11 @@
     <title>echo's web</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="scss/index.css">
+    <link rel="stylesheet" href="./app/scss/index.css">
 
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./js/app.js" defer></script>
+    <script src="./app/js/app.js" defer></script>
 
     <!-- Google Font - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,7 +167,7 @@
             </section>
 
             <div class="form container">
-                    <form class="form__form form__form__mobile flex flex-dc" action="" method="post">
+                    <form class="form__form form__form__mobile flex flex-dc" id="form" action="" method="post">
                         <h3 class="about__heading form__h3">contact form</h3>
                         <h4 class="form__h4">feel free to leave a message</h4>
                             <div class="form__form__wrapper">
@@ -178,19 +178,23 @@
                                     </label>
                                 </div>
                                 <div class="form__name form__name__mobile">
-                                    <input class="form__name__input" type="email" id="name" name="name" autocomplete="off" placeholder=" " required>
-                                    <label class="form__name__label" for="name">
+                                    <input class="form__name__input" type="email" id="mail" name="mail" autocomplete="off" placeholder=" " required>
+                                    <label class="form__name__label" for="mail">
                                         <span class="form__name__label__content" >mail</span>
                                     </label>
                                 </div>
                                 <div class="form__name form__name__mobile">
-                                    <input class="form__name__input" type="text" id="name" name="name" autocomplete="off" placeholder=" " required>
-                                    <label class="form__name__label" for="name">
+                                    <input class="form__name__input" type="text" id="topic" name="topic" autocomplete="off" placeholder=" " required>
+                                    <label class="form__name__label" for="topic">
                                         <span class="form__name__label__content" >topic</span>
                                     </label>
                                 </div>
                             </div>
-                            <button class="form__button form__button__mobile" type="submit">send</button>
+                            <div class="form__disclosure">
+                                <button class="form__button form__button__mobile" type="submit">send</button> 
+                                <span class="form__log form__log__mobile" id="log"></span>
+                            </div>
+                            <!-- <p class="log1">message sent.</p> -->
                     </form>
                 </div>
             </div>

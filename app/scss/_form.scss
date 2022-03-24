@@ -116,6 +116,21 @@
         }
     }
 
+    &__log {
+        position: relative;
+        bottom: 0px;
+        left: 25%;
+
+
+        &__mobile {
+            @include bp.breakpoint-down(small){
+                bottom: 0px;
+                left: 0;
+            }
+        }
+
+    }
+
 }
 
 

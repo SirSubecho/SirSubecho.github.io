@@ -511,7 +511,7 @@ body {
   }
 }
 .contact {
-  min-height: 60vh;
+  min-height: 45vh;
   padding-top: 5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -526,6 +526,7 @@ body {
   .contact__mobile {
     gap: 2em 1em;
     grid-template-rows: 0.2fr 0.3fr 0.4fr;
+    min-height: 65vh;
   }
 }
 .contact__title {
@@ -658,6 +659,17 @@ body {
     position: relative;
     right: -70%;
     height: 4.5vh;
+  }
+}
+.form__log {
+  position: relative;
+  bottom: 0px;
+  left: 25%;
+}
+@media (max-width: 39.9375em) {
+  .form__log__mobile {
+    bottom: 0px;
+    left: 0;
   }
 }
 
