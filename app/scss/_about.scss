@@ -5,7 +5,6 @@
 
 .about {
 
-    // min-height: 781px;
     padding-top: variables.$header-height;
 
     display: grid;
@@ -26,7 +25,6 @@
       &__mobile {
         @include bp.breakpoint-down(small){
             display: grid; 
-            // width: 100%;
             grid-template-columns: 1fr; 
             grid-template-rows: 0.3fr 1fr 1fr 2.5fr 1.5fr; 
             gap: .5em .5em; 
@@ -41,10 +39,6 @@
 
 
     &__heading {
-        // border-bottom: 4px solid black;
-        // need work around since its not working on ios (thickness)
-        // text-decoration: underline solid variables.$grayish;
-
         text-decoration: underline solid variables.$grayish 5px;
     }
 
@@ -52,7 +46,6 @@
         grid-area: about__title;
         font-size: 4vh;
         font-weight: bold;
-        // text-align: center;
     }
 
     &__img {
@@ -111,7 +104,6 @@
             &__text {
                 font-size: medium;
                 font-weight: 200;
-                // padding-left: -15em;
             }
 
             &__a {

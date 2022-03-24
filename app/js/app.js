@@ -10,14 +10,14 @@ const fadeElems = document.querySelectorAll('.has-fade');
 btnHamburger.addEventListener('click', function(event){
     event.preventDefault();
   
-    if(header.classList.contains('open')){ // Close Hamburger Menu
+    if(header.classList.contains('open')){
       header.classList.remove('open');
       fadeElems.forEach(function(element){
         element.classList.remove('fade-in');
         element.classList.add('fade-out');
       });
     }
-    else { // Open Hamburger Menu
+    else {
       header.classList.add('open');
       fadeElems.forEach(function(element){
         element.classList.remove('fade-out');
@@ -59,7 +59,7 @@ let lastId;
 window.addEventListener("scroll", event => {
   let fromTop = window.scrollY;
 
-  if(fromTop < 800) { 
+  if(fromTop < 650) { 
     logoEl.classList.add('hidden')
   } else {
     logoEl.classList.remove('hidden')

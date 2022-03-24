@@ -65,12 +65,6 @@
         &:hover{
             color: variables.$grayish;
         }
-
-        &__mobile {
-            @include bp.breakpoint-down(small){
-                // margin-left: 5vw;
-            }
-        }
     }
 
     &__links {

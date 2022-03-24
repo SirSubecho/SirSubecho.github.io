@@ -6,9 +6,6 @@
 .form {
 
     &__form {
-        // display: flex;
-        // flex-direction: column;
-
         position: relative;
         width: 50%;
 
@@ -102,16 +99,9 @@
 
         &__mobile {
             @include bp.breakpoint-down(small){
-                // width: 100%;
-                
                 position: relative;
                 right: -70%;
-                
                 height: 4.5vh;
-
-                // position: absolute;
-                // right: 5px;
-                // bottom: -50px;
             }
         }
     }
@@ -119,7 +109,7 @@
     &__log {
         position: relative;
         bottom: 0px;
-        left: 25%;
+        left: 40%;
 
 
         &__mobile {

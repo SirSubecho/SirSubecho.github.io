@@ -1,3 +1,5 @@
+@use "_variables" as variables;
+
 .has-fade {
     visibility: hidden;
 }
@@ -38,3 +40,51 @@
   .fade-out {
     animation: fade-out .2s ease-in-out forwards;
   }
+
+// blinking cursor within skills section in headline
+
+.blinking-cursor {
+  color: variables.$greenish;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: variables.$grayish;
+  }
+}
+
+
+// move animation in header for titles
+
+.move-title {
+  animation: move 12s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+  25%{
+      transform: translateY(-7vh);
+  }
+  50%{
+      transform: translateY(-14vh);
+  }
+  75%{
+      transform: translateY(-21vh);
+  }
+  100%{
+      transform: translateY(-28vh);
+  }
+}
+
+.arrow-down {
+  animation: down .7s ease-in-out infinite alternate;
+}
+
+@keyframes down {
+  100%{
+      transform: translate3d(-50%, 10%, 0);
+  }
+}

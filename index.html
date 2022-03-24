@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>echo's web</title>
+    <title>Stephan Hartmann</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./app/scss/index.css">
+    <link rel="stylesheet" href="./app/css/index.css">
 
     <!-- JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./app/js/app.js" defer></script>
 
     <!-- Google Font - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap" rel="stylesheet">   
-
-    <!-- iconscout -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 </head>
     <body>
@@ -52,7 +48,7 @@
                     <div class="home__name">Stephan Hartmann</div>
                     <div class="home__location">a</div>
                     <div class="home__title home__title__mobile">
-                        <div class="home__title__wrapper home__title__wrapper__mobile">
+                        <div class="home__title__wrapper home__title__wrapper__mobile move-title">
                             <div class="home__title__item home__title__item__mobile flex flex-ai-c">web devoloper</div>
                             <div class="home__title__item home__title__item__mobile flex flex-ai-c">student</div>
                             <div class="home__title__item home__title__item__mobile flex flex-ai-c">survivor</div>
@@ -62,7 +58,7 @@
                     </div> 
                     <div class="home__location">based in Berlin, Germany.</div>
                     <a class="home__arrow" href="#about">
-                        <svg class="home__intro__svg home__intro__svg__mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+                        <svg class="home__intro__svg home__intro__svg__mobile arrow-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
                     </a>
                     
                 </div>
@@ -72,7 +68,7 @@
                 <h2 class="hide-on-screen">about</h2>
                 <div class="container about about__mobile" id="about">
                     <div class="about__img">
-                        <img class="about__img__img" src="./assets/about.jpg" alt="">
+                        <img class="about__img__img" src="./assets/about.jpg" alt="profile_picture">
                     </div>
                     <div class="about__title">
                         about me
@@ -132,18 +128,13 @@
                 <h2 class="hide-on-screen">contact</h2>
                 <div class="contact__title">
                     contact me
-                    <!-- <span class="blinking-cursor">.</span> -->
                 </div>
                 <div class="contact__mail">
-                    <!-- <a class="contact__mail__button__a" href="mailto:job@domain.net">
-                        <button class="contact__mail__button contact__mail__button__mobile">mail me.</button>
-                    </a> -->
                     <div class="contact__mail__container contact__mail__container__mobile">
                         <a class="contact__mail__container__button" href="mailto:job@domain.net">
                             mail me.
                         </a>
                     </div>
-                    <!-- <button class="contact__mail__button contact__mail__button__mobile"><a class="contact__mail__button__a" href="mailto:job@domain.net">mail me.</a></button> -->
                 </div>
                 <div class="contact__linkedin flex flex-ai-c flex-dc flex-jc-sb">
                     <a href="https://www.linkedin.com/" target="_blank">
@@ -165,38 +156,36 @@
                 </div>
 
             </section>
-
+            
             <div class="form container">
-                    <form class="form__form form__form__mobile flex flex-dc" id="form" action="" method="post">
+                    <form class="form__form form__form__mobile flex flex-dc" id="form" method="post">
                         <h3 class="about__heading form__h3">contact form</h3>
                         <h4 class="form__h4">feel free to leave a message</h4>
-                            <div class="form__form__wrapper">
-                                <div class="form__name form__name__mobile">
-                                    <input class="form__name__input" type="text" id="name" name="name" autocomplete="off" placeholder=" " required>
-                                    <label class="form__name__label" for="name">
-                                        <span class="form__name__label__content" >name</span>
-                                    </label>
-                                </div>
-                                <div class="form__name form__name__mobile">
-                                    <input class="form__name__input" type="email" id="mail" name="mail" autocomplete="off" placeholder=" " required>
-                                    <label class="form__name__label" for="mail">
-                                        <span class="form__name__label__content" >mail</span>
-                                    </label>
-                                </div>
-                                <div class="form__name form__name__mobile">
-                                    <input class="form__name__input" type="text" id="topic" name="topic" autocomplete="off" placeholder=" " required>
-                                    <label class="form__name__label" for="topic">
-                                        <span class="form__name__label__content" >topic</span>
-                                    </label>
-                                </div>
+                        <div class="form__form__wrapper">
+                            <div class="form__name form__name__mobile">
+                                <input class="form__name__input" type="text" id="name" name="name" autocomplete="off" placeholder=" " required>
+                                <label class="form__name__label" for="name">
+                                    <span class="form__name__label__content" >name</span>
+                                </label>
                             </div>
-                            <div class="form__disclosure">
-                                <button class="form__button form__button__mobile" type="submit">send</button> 
-                                <span class="form__log form__log__mobile" id="log"></span>
+                            <div class="form__name form__name__mobile">
+                                <input class="form__name__input" type="email" id="mail" name="mail" autocomplete="off" placeholder=" " required>
+                                <label class="form__name__label" for="mail">
+                                    <span class="form__name__label__content" >mail</span>
+                                </label>
                             </div>
-                            <!-- <p class="log1">message sent.</p> -->
+                            <div class="form__name form__name__mobile">
+                                <input class="form__name__input" type="text" id="topic" name="topic" autocomplete="off" placeholder=" " required>
+                                <label class="form__name__label" for="topic">
+                                    <span class="form__name__label__content" >topic</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__disclosure">
+                            <button class="form__button form__button__mobile" type="submit">send</button> 
+                            <span class="form__log form__log__mobile" id="log"></span>
+                        </div>
                     </form>
-                </div>
             </div>
 
             <footer class="container container__mobile footer footer__mobile">

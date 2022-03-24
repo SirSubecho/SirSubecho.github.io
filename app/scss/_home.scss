@@ -4,8 +4,6 @@
 
 .home{
     min-height: 100vh;
-    // margin-top: variables.$header-height;
-
     &__intro {
         display: flex;
         flex-direction: column;
@@ -29,13 +27,12 @@
             transform: translateX(-50%);
             width: 80px;
             height: 80px;
-            animation: down .7s ease-in-out infinite alternate;
+            // animation: down .7s ease-in-out infinite alternate;
 
             &__mobile {
                 @include bp.breakpoint-down(small){
                     height: 40px;
                     width: 40px;
-                    // bottom: -20px;
                 }
             }
         }
@@ -67,7 +64,7 @@
 
         &__wrapper {
             height: 100%;
-            animation: move 12s ease-in-out infinite alternate;
+            // animation: move 12s ease-in-out infinite alternate;
         }
 
         &__item {
@@ -77,27 +74,4 @@
             color: variables.$grayish;
         }
     }
-
-    @keyframes move {
-        25%{
-            transform: translateY(-7vh);
-        }
-        50%{
-            transform: translateY(-14vh);
-        }
-        75%{
-            transform: translateY(-21vh);
-        }
-        100%{
-            transform: translateY(-28vh);
-        }
-    }
-
-    @keyframes down {
-        100%{
-            transform: translate3d(-50%, 10%, 0);
-        }
-    }
-
-
 }
